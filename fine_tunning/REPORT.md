@@ -125,18 +125,23 @@ flowchart TD
 ### 3.2 Training Process
 
 ```mermaid
-timeline
-    title Fine-tuning Timeline
+flowchart TD
+    A[15:27:15<br/>Job Created] --> B[15:28:30<br/>Files Validated]
+    B --> C[15:28:36<br/>Training Started]
+    C --> D[15:34:57<br/>Checkpoint Step 80]
+    D --> E[15:34:57<br/>Checkpoint Step 160]
+    E --> F[15:34:57<br/>Training Completed]
+    F --> G[15:48:10<br/>Usage Policy Evaluation]
+    G --> H[15:48:16<br/>Job Successfully Completed]
     
-    section Training Phase
-        15:27:15 : Job Created
-        15:28:30 : Files Validated
-        15:28:36 : Training Started
-        15:34:57 : Checkpoint (Step 80)
-        15:34:57 : Checkpoint (Step 160)
-        15:34:57 : Training Completed
-        15:48:10 : Usage Policy Evaluation
-        15:48:16 : Job Successfully Completed
+    style A fill:#1976d2,stroke:#0d47a1,stroke-width:2px,color:#ffffff
+    style B fill:#388e3c,stroke:#1b5e20,stroke-width:2px,color:#ffffff
+    style C fill:#f57c00,stroke:#e65100,stroke-width:2px,color:#ffffff
+    style D fill:#7b1fa2,stroke:#4a148c,stroke-width:2px,color:#ffffff
+    style E fill:#7b1fa2,stroke:#4a148c,stroke-width:2px,color:#ffffff
+    style F fill:#388e3c,stroke:#1b5e20,stroke-width:2px,color:#ffffff
+    style G fill:#f57c00,stroke:#e65100,stroke-width:2px,color:#ffffff
+    style H fill:#388e3c,stroke:#1b5e20,stroke-width:2px,color:#ffffff
 ```
 
 ### 3.3 Training Metrics
