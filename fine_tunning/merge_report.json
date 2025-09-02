@@ -1,0 +1,16 @@
+{
+  "merge_summary": {
+    "total_original_records": 107,
+    "duplicates_removed": 1,
+    "final_record_count": 150,
+    "new_records_added": 43
+  },
+  "label_distribution": {
+    "functional": 97,
+    "non-functional": 53
+  },
+  "data_quality": {
+    "valid_records": 150,
+    "issues": []
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "model_name": "gpt-4.1-nano-2025-04-14",
+  "evaluation_date": "2025-09-02 16:51:40",
+  "total_examples": 27,
+  "correct_predictions": 16,
+  "accuracy": 59.25925925925925,
+  "detailed_results": [
+    {
+      "example_id": 1,
+      "requirement": "The system upon detection of inactivity of an interactive session shall prevent further viewing and access to the system by that session by terminating the session  or by initiating a session lock that remains in effect until the user reestablishes access using appropriate identification and authentication procedures.",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 2,
+      "requirement": "The system shall provide the ability to capture and maintain  as discrete data elements  the identity of all providers associated with a specific patient encounter.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 3,
+      "requirement": "The system shall provide the ability to identify the full content of a modified note  both the original content and the content resulting after any changes  corrections  clarifications  addenda  etc. to a finalized note.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 4,
+      "requirement": "The inactivity timeout shall be configurable.",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 5,
+      "requirement": "The purpose of the criteria is to provide the ability to remove a user's privileges  but maintain a history of the user in the system.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 6,
+      "requirement": "The system shall provide the ability to update the clinical content or rules utilized to generate clinical decision support reminders and alerts.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 7,
+      "requirement": "When access to a chart is restricted  the system shall provide a means for appropriately authorized users to \"break the glass\" for emergency situations.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 8,
+      "requirement": "The system shall enforce the most restrictive set of rights or privileges or accesses needed by users or groups (e.g. System Administration  Clerical  Nurse  Doctor  etc.)  or processes acting on behalf of users  for the performance of specified tasks.",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 9,
+      "requirement": "The system shall provide the ability to save a note in progress prior to finalizing the note.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 10,
+      "requirement": "The system shall provide the ability to record user and date stamp for prescription related events  such as initial creation  renewal  refills  discontinuation  and cancellation of a prescription.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 11,
+      "requirement": "The system shall be able to detect security-relevant events that it mediates and generate audit records for them.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 12,
+      "requirement": "The system shall provide the ability to record the chronicity (chronic  acute or self-limiting  etc.) of a problem or diagnosis.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 13,
+      "requirement": "The system shall include documentation of the minimal privileges necessary for each service and protocol necessary to provide EHR functionality possibly and possibly serviceability.",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 14,
+      "requirement": "The user ID and date or time stamp shall be recorded.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 15,
+      "requirement": "The system shall provide the capability to generate reports based on ranges of system date and time that audit records were collected.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 16,
+      "requirement": "The system shall provide the ability to retain data until otherwise purged  deleted  archived or otherwise deliberately removed.",
+      "expected": "functional",
+      "predicted": "non-functional",
+      "correct": false
+    },
+    {
+      "example_id": 17,
+      "requirement": "The system shall provide the ability to identify certain information as confidential and only make that accessible by appropriately authorized users.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 18,
+      "requirement": "The system shall provide templates for inputting data in a structured format as part of clinical documentation.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 19,
+      "requirement": "The system shall protect against further  possibly malicious  user authentication attempts using an appropriate mechanism (e.g. locks the account or node until released by an administrator  locks the account or node for a configurable time period  or delays the next login prompt according to a  configurable delay algorithm).",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 20,
+      "requirement": "The system shall provide the ability to capture and maintain  as discrete data  the identity of the user who added  modified  inactivated or removed items from the allergy and adverse reaction list  including attributes of the changed items.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 21,
+      "requirement": "The system shall provide only limited feedback information to the user during the authentication.",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 22,
+      "requirement": "The system must be able to associate permissions with a user using one or more of the following access controls: 1) user-based (access rights assigned to each user); 2) role-based (users are grouped and access rights assigned to these groups); or 3) context-based (role-based with additional access rights assigned or restricted based on the context of the transaction such as time-of-day  workstation-location  emergency-mode  etc.)  The system shall support removal of a user's privileges without deleting the user from the system.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    },
+    {
+      "example_id": 23,
+      "requirement": "The system shall provide the ability to filter  search or order notes by the provider who finalized the note.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 24,
+      "requirement": "When passwords are used  the system shall support password strength rules that allow for minimum number of characters  and inclusion of alpha-numeric complexity.",
+      "expected": "non-functional",
+      "predicted": "non-functional",
+      "correct": true
+    },
+    {
+      "example_id": 25,
+      "requirement": "The system shall provide the ability to query for a patient by more than one form of identification.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 26,
+      "requirement": "The system shall create a single patient record for each patient.",
+      "expected": "functional",
+      "predicted": "functional",
+      "correct": true
+    },
+    {
+      "example_id": 27,
+      "requirement": "The system shall provide the ability to prevent specified user(s) from accessing a designated patient's chart.",
+      "expected": "non-functional",
+      "predicted": "functional",
+      "correct": false
+    }
+  ]
+}
