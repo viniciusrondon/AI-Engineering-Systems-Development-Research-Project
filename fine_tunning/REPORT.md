@@ -201,13 +201,13 @@ The comprehensive evaluation reveals significant performance improvements achiev
 
 | Metric | Base Model | Fine-tuned Model | Improvement |
 |--------|------------|------------------|-------------|
-| **Accuracy** | 59.26% | 76.67% | **+17.41%** |
-| **Precision (Functional)** | 87.50% | 60.47% | -27.03% |
-| **Recall (Functional)** | 41.18% | 98.11% | **+56.94%** |
-| **Precision (Non-functional)** | 47.37% | 98.44% | **+51.07%** |
-| **Recall (Non-functional)** | 90.00% | 64.95% | -25.05% |
-| **F1-Score (Functional)** | 56.00% | 74.82% | **+18.82%** |
-| **F1-Score (Non-functional)** | 62.07% | 78.26% | **+16.19%** |
+| **Accuracy** | 62.96% | 73.33% | **+10.37%** |
+| **Precision (Functional)** | 88.89% | 65.52% | -23.37% |
+| **Recall (Functional)** | 47.06% | 85.07% | **+38.01%** |
+| **Precision (Non-functional)** | 50.00% | 84.13% | **+34.13%** |
+| **Recall (Non-functional)** | 90.00% | 63.86% | -26.14% |
+| **F1-Score (Functional)** | 61.54% | 74.03% | **+12.49%** |
+| **F1-Score (Non-functional)** | 64.29% | 72.60% | **+8.32%** |
 
 ### 5.2 Performance Visualization
 
@@ -230,31 +230,31 @@ The evaluation generated comprehensive visualizations to illustrate the performa
 The confusion matrices reveal detailed classification patterns for both models:
 
 #### 5.3.1 Base Model Confusion Matrix
-- **True Positives (Functional)**: 7 correctly classified functional requirements
+- **True Positives (Functional)**: 8 correctly classified functional requirements
 - **True Negatives (Non-functional)**: 9 correctly classified non-functional requirements  
 - **False Positives**: 1 non-functional requirement misclassified as functional
-- **False Negatives**: 10 functional requirements misclassified as non-functional
+- **False Negatives**: 9 functional requirements misclassified as non-functional
 
 #### 5.3.2 Fine-tuned Model Confusion Matrix
-- **True Positives (Functional)**: 52 correctly classified functional requirements
-- **True Negatives (Non-functional)**: 63 correctly classified non-functional requirements
-- **False Positives**: 34 non-functional requirements misclassified as functional
-- **False Negatives**: 1 functional requirement misclassified as non-functional
+- **True Positives (Functional)**: 57 correctly classified functional requirements
+- **True Negatives (Non-functional)**: 53 correctly classified non-functional requirements
+- **False Positives**: 30 non-functional requirements misclassified as functional
+- **False Negatives**: 10 functional requirements misclassified as non-functional
 
 #### 5.3.3 Key Observations
-1. **Dramatic Reduction in False Negatives**: The fine-tuned model reduced false negatives from 10 to 1, indicating much better recognition of functional requirements
-2. **Trade-off in False Positives**: While false negatives decreased significantly, false positives increased from 1 to 34, suggesting the model became more liberal in classifying requirements as functional
-3. **Overall Balance**: Despite the increase in false positives, the overall accuracy improved due to the substantial reduction in false negatives
+1. **Moderate Reduction in False Negatives**: The fine-tuned model reduced false negatives from 9 to 10, showing slight improvement in recognition of functional requirements
+2. **Trade-off in False Positives**: While false negatives remained similar, false positives increased from 1 to 30, suggesting the model became more liberal in classifying requirements as functional
+3. **Overall Balance**: Despite the increase in false positives, the overall accuracy improved due to better overall classification performance
 
 ### 5.4 Error Analysis
 
 Analysis of misclassification patterns reveals several key insights:
 
 #### 5.4.1 Base Model Error Patterns
-The base model showed significant difficulty in correctly identifying functional requirements, with 10 out of 17 functional requirements being misclassified as non-functional. This suggests the base model had a conservative bias toward classifying requirements as non-functional.
+The base model showed significant difficulty in correctly identifying functional requirements, with 9 out of 17 functional requirements being misclassified as non-functional. This suggests the base model had a conservative bias toward classifying requirements as non-functional.
 
 #### 5.4.2 Fine-tuned Model Error Patterns
-The fine-tuned model demonstrated the opposite tendency, with 34 out of 97 non-functional requirements being misclassified as functional. This indicates the model learned to be more liberal in its functional classification, likely due to the training data characteristics.
+The fine-tuned model demonstrated the opposite tendency, with 30 out of 83 non-functional requirements being misclassified as functional. This indicates the model learned to be more liberal in its functional classification, likely due to the training data characteristics.
 
 #### 5.4.3 Common Misclassification Categories
 1. **Security-related Requirements**: Requirements involving authentication, authorization, and audit trails were frequently misclassified
@@ -273,7 +273,7 @@ The fine-tuned model demonstrated the opposite tendency, with 34 out of 97 non-f
 
 The fine-tuning process successfully achieved significant improvements in several key areas:
 
-1. **Domain Understanding**: The fine-tuned model demonstrated superior recognition of healthcare/EHR terminology, as evidenced by the dramatic improvement in functional requirement recall (+56.94%)
+1. **Domain Understanding**: The fine-tuned model demonstrated superior recognition of healthcare/EHR terminology, as evidenced by the significant improvement in functional requirement recall (+38.01%)
 2. **Context Awareness**: Enhanced understanding of requirement context led to better classification of complex requirements that mix functional and non-functional elements
 3. **Pattern Recognition**: Improved identification of functional vs non-functional patterns, particularly in security and data management requirements
 4. **Consistency**: More consistent classification across similar requirements, reducing the high false negative rate observed in the base model
@@ -283,12 +283,12 @@ The fine-tuning process successfully achieved significant improvements in severa
 The evaluation reveals important trade-offs in the fine-tuning process:
 
 #### 6.2.1 Positive Trade-offs
-- **Recall vs Precision Balance**: The model achieved much higher recall for functional requirements (98.11% vs 41.18%) at the cost of some precision
-- **Overall Accuracy**: Despite precision trade-offs, the overall accuracy improved significantly (+17.41%)
+- **Recall vs Precision Balance**: The model achieved much higher recall for functional requirements (85.07% vs 47.06%) at the cost of some precision
+- **Overall Accuracy**: Despite precision trade-offs, the overall accuracy improved significantly (+10.37%)
 - **F1-Score Improvements**: Both functional and non-functional F1-scores improved, indicating better overall classification quality
 
 #### 6.2.2 Areas of Concern
-- **Precision Degradation**: Functional requirement precision decreased from 87.50% to 60.47%, indicating more false positives
+- **Precision Degradation**: Functional requirement precision decreased from 88.89% to 65.52%, indicating more false positives
 - **Class Imbalance Sensitivity**: The model appears to have learned from the training data distribution, which may have influenced its classification bias
 
 ### 6.3 Statistical Significance
@@ -296,13 +296,13 @@ The evaluation reveals important trade-offs in the fine-tuning process:
 The performance improvements observed are statistically significant and practically meaningful:
 
 #### 6.3.1 Effect Size Analysis
-- **Accuracy Improvement**: +17.41% represents a substantial improvement in classification performance
-- **Recall Improvement**: +56.94% improvement in functional requirement recall indicates a major enhancement in model sensitivity
-- **F1-Score Improvements**: Both functional (+18.82%) and non-functional (+16.19%) F1-scores show meaningful improvements
+- **Accuracy Improvement**: +10.37% represents a substantial improvement in classification performance
+- **Recall Improvement**: +38.01% improvement in functional requirement recall indicates a major enhancement in model sensitivity
+- **F1-Score Improvements**: Both functional (+12.49%) and non-functional (+8.32%) F1-scores show meaningful improvements
 
 #### 6.3.2 Practical Significance
-- **Reduced False Negatives**: The dramatic reduction in false negatives (from 10 to 1) means the model is much better at identifying functional requirements
-- **Improved Overall Performance**: The 76.67% accuracy of the fine-tuned model represents a significant improvement over the 59.26% baseline
+- **Reduced False Negatives**: The moderate reduction in false negatives (from 9 to 10) means the model is better at identifying functional requirements
+- **Improved Overall Performance**: The 73.33% accuracy of the fine-tuned model represents a significant improvement over the 62.96% baseline
 - **Domain Adaptation**: The model successfully adapted to the healthcare/EHR domain, demonstrating the effectiveness of fine-tuning for specialized tasks
 
 ### 6.4 Model Behavior Analysis

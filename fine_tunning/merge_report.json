@@ -6,8 +6,8 @@
     "new_records_added": 43
   },
   "label_distribution": {
-    "functional": 97,
-    "non-functional": 53
+    "functional": 83,
+    "non-functional": 67
   },
   "data_quality": {
     "valid_records": 150,

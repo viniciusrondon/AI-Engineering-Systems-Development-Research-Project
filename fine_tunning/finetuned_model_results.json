@@ -1,9 +1,9 @@
 {
   "model_name": "ft:gpt-4.1-nano-2025-04-14:rondon:viniciusrondon:CBQ8G05I",
-  "evaluation_date": "2025-09-02 16:53:43",
+  "evaluation_date": "2025-09-03 11:47:27",
   "total_examples": 150,
-  "correct_predictions": 115,
-  "accuracy": 76.66666666666667,
+  "correct_predictions": 110,
+  "accuracy": 73.33333333333333,
   "detailed_results": [
     {
       "example_id": 1,
@@ -541,8 +541,8 @@
       "example_id": 77,
       "requirement": "The system shall include documentation of product capacities (e.g. number of users  number of transactions per second  number of records  network load  etc.) and the baseline representative configurations assumed for these capacities (e.g. number or type of processors  server or workstation configuration and network capacity  etc).",
       "expected": "functional",
-      "predicted": "functional",
-      "correct": true
+      "predicted": "non-functional",
+      "correct": false
     },
     {
       "example_id": 78,
@@ -771,9 +771,9 @@
     {
       "example_id": 110,
       "requirement": "The parties mutually agree that CMS may disapprove the appointment of a custodian or may require the appointment of a new custodian at any time.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "non-functional",
-      "correct": false
+      "correct": true
     },
     {
       "example_id": 111,
@@ -785,9 +785,9 @@
     {
       "example_id": 112,
       "requirement": "The solution must should notifications to the dispensing machine regarding medications ordered for the inmate  and new or deleted drug dictionary entries.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 113,
@@ -806,9 +806,9 @@
     {
       "example_id": 115,
       "requirement": "The system has capability of importing and export patient demographic data via HL7 interface from an existing Practice Management System  Patient Registration System  or any such system used for patient registration possibly and possibly scheduling.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 116,
@@ -827,16 +827,16 @@
     {
       "example_id": 118,
       "requirement": "The solution should perform edit checks during the manifesting process to confirm that the medication has been verified  barcode checked  validates that the patient is in the building being manifested  and to ensure that Rx has not be associated with a different manifest.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "non-functional",
-      "correct": false
+      "correct": true
     },
     {
       "example_id": 119,
       "requirement": "To enforce any edition other than that specified in this section  the Department of Health and Human Services must publish notice of change in the Federal Register and the material must be available to the public.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "non-functional",
-      "correct": false
+      "correct": true
     },
     {
       "example_id": 120,
@@ -848,9 +848,9 @@
     {
       "example_id": 121,
       "requirement": "The system has the capability of allowing the display of past hospitalizations  diagnostic procedures  & past therapies for review at the option of the provider.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 122,
@@ -862,23 +862,23 @@
     {
       "example_id": 123,
       "requirement": "The solution should provide the ability to manage possibly and possibly develop patient guidance and reminders related to specific clinical conditions.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 124,
       "requirement": "The appointments are listed in the format 'MM/DD/YYYY - AppointmentType'.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "non-functional",
-      "correct": false
+      "correct": true
     },
     {
       "example_id": 125,
       "requirement": "The solution should provide the ability for providers to pass on the responsibility to perform follow up actions to other providers.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 126,
@@ -946,16 +946,16 @@
     {
       "example_id": 135,
       "requirement": "The solution should conform to function IN.2.2 (Auditable Records).",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "non-functional",
-      "correct": false
+      "correct": true
     },
     {
       "example_id": 136,
       "requirement": "The system shall provide the ability to capture and display formulary information from pharmacy or PBM (Pharmacy Benefits Manager)  by applying eligibility response.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 137,
@@ -974,9 +974,9 @@
     {
       "example_id": 139,
       "requirement": "The system shall provide standard data extraction Application Program Interface (API) to allow import and export of data.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 140,
@@ -1002,9 +1002,9 @@
     {
       "example_id": 143,
       "requirement": "The solution should present the medication history associated with a patient.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 144,
@@ -1030,9 +1030,9 @@
     {
       "example_id": 147,
       "requirement": "The system has the capability to view patient Immunization List.",
-      "expected": "functional",
+      "expected": "non-functional",
       "predicted": "functional",
-      "correct": true
+      "correct": false
     },
     {
       "example_id": 148,

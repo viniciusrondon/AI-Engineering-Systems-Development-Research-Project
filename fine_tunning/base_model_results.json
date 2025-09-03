@@ -1,9 +1,9 @@
 {
   "model_name": "gpt-4.1-nano-2025-04-14",
-  "evaluation_date": "2025-09-02 16:51:40",
+  "evaluation_date": "2025-09-03 11:45:02",
   "total_examples": 27,
-  "correct_predictions": 16,
-  "accuracy": 59.25925925925925,
+  "correct_predictions": 17,
+  "accuracy": 62.96296296296296,
   "detailed_results": [
     {
       "example_id": 1,
@@ -100,8 +100,8 @@
       "example_id": 14,
       "requirement": "The user ID and date or time stamp shall be recorded.",
       "expected": "non-functional",
-      "predicted": "functional",
-      "correct": false
+      "predicted": "non-functional",
+      "correct": true
     },
     {
       "example_id": 15,

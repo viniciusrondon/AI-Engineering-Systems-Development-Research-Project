@@ -76,6 +76,26 @@ class ExcelToJSONLConverter:
             print(f"\nColumn '{col}' has {unique_count} unique values")
             if unique_count <= 10:  # Show unique values if not too many
                 print(f"Unique values: {df[col].unique().tolist()}")
+        
+        # Special check for NF column
+        if 'NF' in df.columns:
+            print(f"\n🎯 NF Column Analysis:")
+            print(f"NF column data type: {df['NF'].dtype}")
+            print(f"NF unique values: {df['NF'].unique()}")
+            print(f"NF value counts:")
+            print(df['NF'].value_counts().sort_index())
+            
+            # Show sample conversions
+            print(f"\n📋 Sample NF conversions:")
+            for i in range(min(5, len(df))):
+                nf_value = df.iloc[i]['NF']
+                if nf_value == 1 or str(nf_value).strip() == '1':
+                    converted = 'functional'
+                elif nf_value == 0 or str(nf_value).strip() == '0':
+                    converted = 'non-functional'
+                else:
+                    converted = f'unknown ({nf_value})'
+                print(f"  Row {i}: NF={nf_value} -> {converted}")
     
     def convert_to_jsonl_format(self, df: pd.DataFrame) -> List[Dict]:
         """
@@ -99,7 +119,7 @@ class ExcelToJSONLConverter:
             col_lower = col.lower()
             if any(keyword in col_lower for keyword in ['requirement', 'text', 'content', 'description']):
                 requirement_col = col
-            elif any(keyword in col_lower for keyword in ['label', 'category', 'type', 'class']):
+            elif any(keyword in col_lower for keyword in ['label', 'category', 'type', 'class', 'nf']):
                 label_col = col
         
         # If we can't identify columns automatically, use the first two columns
@@ -118,19 +138,32 @@ class ExcelToJSONLConverter:
         # Convert each row to JSONL format
         for index, row in df.iterrows():
             requirement_text = str(row[requirement_col]).strip()
-            label = str(row[label_col]).strip().lower()
+            label_value = row[label_col]
             
-            # Normalize label to match expected format
-            if 'functional' in label and 'non' not in label:
-                normalized_label = 'functional'
-            elif 'non-functional' in label or 'nonfunctional' in label:
-                normalized_label = 'non-functional'
-            else:
-                # Try to infer from context
-                if 'non' in label:
+            # Handle NF column specifically (1 = functional, 0 = non-functional)
+            if label_col.lower() == 'nf':
+                if label_value == 1 or str(label_value).strip() == '1':
+                    normalized_label = 'functional'
+                elif label_value == 0 or str(label_value).strip() == '0':
                     normalized_label = 'non-functional'
                 else:
+                    print(f"⚠️  Warning: Unexpected NF value '{label_value}' at row {index}, defaulting to 'functional'")
                     normalized_label = 'functional'
+            else:
+                # Handle other label formats
+                label = str(label_value).strip().lower()
+                
+                # Normalize label to match expected format
+                if 'functional' in label and 'non' not in label:
+                    normalized_label = 'functional'
+                elif 'non-functional' in label or 'nonfunctional' in label:
+                    normalized_label = 'non-functional'
+                else:
+                    # Try to infer from context
+                    if 'non' in label:
+                        normalized_label = 'non-functional'
+                    else:
+                        normalized_label = 'functional'
             
             # Create JSONL record in the expected format
             jsonl_record = {
